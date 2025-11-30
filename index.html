@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fono Amanda</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="banner">
+    <div class="banner-logo">
+        <img src=".//imagens/logo2.png.png" alt="Logo Amanda Gomes">
+    </div>
+
+    <div class="banner-texto">
+        <h1>Fono Amanda</h1>
+        <p>Fonoaudióloga · Goiânia · Atendimento especializado</p>
+    </div>
+</header>
+
+<div class="layout">
+
+<nav class="menu-lateral">
+    <a href="Materias.html">Materias</a>
+    <a href="meu trabalho.html">Meu Trabalho</a>
+    <a href="agendamento.html">Agendamento</a>
+</nav>
+
+<main class="conteudo">
+
+    <section class="apresentacao">
+        <img src="./imagens/foto_madinha.png.jpeg" alt="Amanda">
+        <div>
+            <p><strong>Prazer, me chamo Amanda.</strong> Sou fonoaudióloga em Goiânia, registrada no CRFa 5-12246 e formada pela PUC Goiás.</p>
+            <p>Sou especialista em Linguagem, com certificações em Prompt, Teach, CAA (Core Power), TDL, DTTC, Rest, Teste da Linguinha, Gagueira e ABA.</p>
+            <p>Estou à disposição para ajudar! 😊</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="agendamento">
+        <h2>Agendamento</h2>
+
+        <form onsubmit="enviarWhatsApp(); return false;">
+            <label>Nome</label>
+            <input type="text" id="nome" required>
+
+            <label>Telefone</label>
+            <input type="tel" id="telefone" required>
+
+            <label>Email</label>
+            <input type="email" id="email">
+
+            <label>Data</label>
+            <input type="date" id="data" required>
+
+            <label>Horário</label>
+            <input type="time" id="hora" required>
+
+            <label>Mensagem</label>
+            <textarea id="mensagem"></textarea>
+
+            <button type="submit">Enviar para WhatsApp</button>
+        </form>
+    </section>
+
+</main>
+</div>
+
+<footer>
+    <p>amandagomes.ds@gmail.com</p>
+    <p>
+        <a href="https://instagram.com/fonoamandagomes" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
+            @fonoamandagomes
+        </a>
+    </p>
+</footer>
+
+<a href="https://wa.me/5562986213535" class="whatsapp-fixo" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
+<script>
+function enviarWhatsApp() {
+    let nome = document.getElementById("nome").value;
+    let telefone = document.getElementById("telefone").value;
+    let email = document.getElementById("email").value;
+    let data = document.getElementById("data").value;
+    let hora = document.getElementById("hora").value;
+    let mensagem = document.getElementById("mensagem").value;
+
+    let texto = `Olá, gostaria de agendar uma consulta:\n\nNome: ${nome}\nTelefone: ${telefone}\nEmail: ${email}\nData: ${data}\nHorário: ${hora}\nMensagem: ${mensagem}`;
+
+    let numero = "5562986213535";
+    let url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>

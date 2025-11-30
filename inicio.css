@@ -1,0 +1,34 @@
+style /* RESPONSIVO PARA CELULAR */
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .texto {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container img {
+        width: 200px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
