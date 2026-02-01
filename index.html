@@ -1,107 +1,242 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fono Amanda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fono Amanda | Fonoaudióloga em Goiânia</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="sTFoQM__NQtNlxq4lxLWR7rOVtT3JMs6HyYyJPn2AbY" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
+<!-- BANNER -->
 <header class="banner">
     <div class="banner-logo">
-        <img src=".//imagens/logo2.png.png" alt="Logo Amanda Gomes">
+        <img src="./imagens/cortada.png.png" alt="Logo Amanda Gomes">
     </div>
 
-    <div class="banner-texto">
-        <h1>Fono Amanda</h1>
-        <p>Fonoaudióloga · Goiânia · Atendimento especializado</p>
-    </div>
+    <!-- MENU -->
+    <nav class="menu-topo">
+        <a href="#meu-trabalho">Sobre mim</a>
+        <a href="#agendamento">Agendamento</a>
+        <a href="#materias">Material</a>
+    </nav>
 </header>
 
-<div class="layout">
+<main>
 
-<nav class="menu-lateral">
-    <a href="Materias.html">Materias</a>
-    <a href="meu trabalho.html">Meu Trabalho</a>
-    <a href="agendamento.html">Agendamento</a>
-</nav>
+    <!-- SOBRE MIM -->
+    <section id="meu-trabalho" class="apresentacao">
+        <div class="apresentacao-imagem">
+            <img src="./imagens/testefoto.jpeg" alt="Amanda Gomes">
+        </div>
 
-<main class="conteudo">
-
-    <section class="apresentacao">
-        <img src="./imagens/foto_madinha.png.jpeg" alt="Amanda">
-        <div>
-            <p><strong>Prazer, me chamo Amanda.</strong> Sou fonoaudióloga em Goiânia, registrada no CRFa 5-12246 e formada pela PUC Goiás.</p>
-            <p>Sou especialista em Linguagem, com certificações em Prompt, Teach, CAA (Core Power), TDL, DTTC, Rest, Teste da Linguinha, Gagueira e ABA.</p>
-            <p>Estou à disposição para ajudar! 😊</p>
+        <div class="apresentacao-texto">
+            <p><strong>Prazer, me chamo Amanda.</strong></p>
+            <p>
+                Sou fonoaudióloga infantil em Goiânia, registrada no CRFa 5-12246 e formada
+                pela PUC Goiás.
+            </p>
+            <p>
+                Especialista em Linguagem, com certificações em Prompt, Teach,
+                CAA (Core Power), TDL, DTTC, Rest, Teste da Linguinha,
+                Gagueira e ABA.
+            </p>
+            <p>Estou à disposição para ajudar ❤️</p>
         </div>
     </section>
 
-    <hr>
+    <!-- AGENDAMENTO + FAQ -->
+    <section class="faq-wrapper">
+        <div class="agendamento-faq">
 
-    <section class="agendamento">
-        <h2>Agendamento</h2>
+            <!-- AGENDAMENTO -->
+            <div class="agendamento-area" id="agendamento">
+                <h2>Agendamento</h2>
 
-        <form onsubmit="enviarWhatsApp(); return false;">
-            <label>Nome</label>
-            <input type="text" id="nome" required>
+                <form class="form-agendamento" onsubmit="enviarWhatsApp(); return false;">
+                    <div class="campo">
+                        <label for="nome">Nome do responsável</label>
+                        <input type="text" id="nome" required>
+                    </div>
 
-            <label>Telefone</label>
-            <input type="tel" id="telefone" required>
+                    <div class="campo">
+                        <label for="crianca">Nome da criança</label>
+                        <input type="text" id="crianca" required>
+                    </div>
 
-            <label>Email</label>
-            <input type="email" id="email">
+                    <div class="campo">
+                        <label for="idade">Idade da criança</label>
+                        <input type="number" id="idade" min="0" max="99" required>
+                    </div>
 
-            <label>Data</label>
-            <input type="date" id="data" required>
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" required>
+                    </div>
 
-            <label>Horário</label>
-            <input type="time" id="hora" required>
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
 
-            <label>Mensagem</label>
-            <textarea id="mensagem"></textarea>
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" rows="4"></textarea>
+                    </div>
 
-            <button type="submit">Enviar para WhatsApp</button>
-        </form>
+                    <button type="submit" class="btn-agendar">
+                        Enviar para WhatsApp
+                    </button>
+                </form>
+            </div>
+
+            <!-- FAQ -->
+            <div class="faq-area">
+                <div class="faq">
+                    <h2>Perguntas Frequentes</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-pergunta">
+                            Quando procurar um fonoaudiólogo?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-resposta">
+                            <ol style="list-style: decimal; list-style-position: inside;">
+                                <li>Em caso de atraso no desenvolvimento da fala.</li>
+                                <li>Trocas ou omissões de sons não esperadas para a idade.</li>
+                                <li>Dificuldade para compreender instruções simples.</li>
+                                <li>Dificuldade de compreensão por pessoas fora do convívio.</li>
+                                <li>Presença de gagueira.</li>
+                                <li>Dificuldades na leitura e escrita.</li>
+                                <li>Respiração oral.</li>
+                                <li>Ceceio anterior ou lateral.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-pergunta">
+                            A partir de que idade a criança pode iniciar a terapia?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>
+                                O acompanhamento pode ser iniciado em qualquer idade,
+                                inclusive em bebês, sempre que houver indicação.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-pergunta">
+                            Como funciona a primeira consulta?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>
+                                É realizada uma anamnese detalhada para compreender
+                                o histórico e as queixas apresentadas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-pergunta">
+                            O atendimento é somente presencial?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>Sim. Os atendimentos são presenciais.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-pergunta">
+                            Aceita plano de saúde?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>Não. Atendimentos apenas particulares.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO -->
+    <div class="localizacao">
+        <h3>Localização</h3>
+        <p>
+            📍 <strong>Setor Nova Suíça – Goiânia – GO</strong>
+        </p>
+
+        <iframe
+            src="https://www.google.com/maps?q=-16.7136,-49.277384&hl=pt-BR&z=16&output=embed"
+            loading="lazy">
+        </iframe>
+
+        <a class="btn-maps"
+           href="https://www.google.com/maps/search/?api=1&query=-16.7136,-49.277384"
+           target="_blank">
+            📍 Abrir no Google Maps
+        </a>
+    </div>
+
+    <!-- MATERIAL -->
+    <section id="materias">
+        <h2>Material</h2>
+
+        <div class="materia-pdf">
+            <h3>Folder – Conscientização CAA</h3>
+
+            <div class="pdf-preview">
+                <iframe src="./folder-conscientizacao-caa.pdf.pdf"></iframe>
+            </div>
+
+            <div class="pdf-botoes">
+                <a href="./folder-conscientizacao-caa.pdf.pdf" target="_blank" class="btn-clinica">
+                    Visualizar PDF
+                </a>
+                <a href="./folder-conscientizacao-caa.pdf.pdf" download class="btn-clinica btn-outline">
+                    Baixar PDF
+                </a>
+            </div>
+        </div>
     </section>
 
 </main>
-</div>
 
 <footer>
-    <p>amandagomes.ds@gmail.com</p>
-    <p>
-        <a href="https://instagram.com/fonoamandagomes" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
-            @fonoamandagomes
+    <a href="https://instagram.com/fonoamandagomes" target="_blank" class="instagram-icon">
+        <img src="./imagens/—Pngtree—instagram white icon free logo_3570433.png" alt="Instagram">
+    </a>
+
+    <p style="margin-top: 10px; font-size: 13px; color: white;">
+        Desenvolvido pelo
+        <a href="https://devmarcosdutra.netlify.app/" target="_blank" style="color: white; text-decoration: underline;">
+            Dev Marcos Dutra
         </a>
     </p>
 </footer>
 
+<!-- WHATSAPP FIXO -->
 <a href="https://wa.me/5562986213535" class="whatsapp-fixo" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
-<script>
-function enviarWhatsApp() {
-    let nome = document.getElementById("nome").value;
-    let telefone = document.getElementById("telefone").value;
-    let email = document.getElementById("email").value;
-    let data = document.getElementById("data").value;
-    let hora = document.getElementById("hora").value;
-    let mensagem = document.getElementById("mensagem").value;
-
-    let texto = `Olá, gostaria de agendar uma consulta:\n\nNome: ${nome}\nTelefone: ${telefone}\nEmail: ${email}\nData: ${data}\nHorário: ${hora}\nMensagem: ${mensagem}`;
-
-    let numero = "5562986213535";
-    let url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-
-    window.open(url, "_blank");
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
+
